@@ -227,6 +227,7 @@ public class expMec {
         System.out.println("Global Best Decision: " + Arrays.toString(pso.gBest));
         System.out.println("Global Best Cache Decision: " + Arrays.toString(pso.cgBest));
         System.out.println("psocacheedge：  "+pso.gBestFitness);
+        psoCacheMemoryRecord.addAll(psoCacheMemory);
         return pso;
     }
     public void randCache(){
