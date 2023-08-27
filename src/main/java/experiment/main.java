@@ -82,8 +82,10 @@ public class main {
         expMec exp_mec = new expMec(randCacheMemoryRecord,psoCacheMemoryRecord,taskList,taskList_org,baseStationes, edgeServes, M, N,C, startTime, timeRange);
         for(int j = 0;j<requestNum;j++){
             exp_mec.toSimulation();
-            cacheUpdate cacheUpdate = new cacheUpdate(psoCacheMemoryRecord,taskList,requestList);
-            cacheUpdate.toUpdate();
+            if(psoCacheMemoryRecord.size()!=1){
+                cacheUpdate cacheUpdate = new cacheUpdate(psoCacheMemoryRecord,taskList,requestList);
+                cacheUpdate.toUpdate();
+            }
         }
     }
 
